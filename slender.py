@@ -43,7 +43,14 @@ def waterfall_fill(slender):
     Returns:
         Nothing, but modifies slender in-place to contiguos-ify it.
     """
-    pass
+    for i in range(len(slender)):
+        for j in range(len(slender[i])):
+            fill_in = False
+            if slender[i][j]:
+                fill_in = True
+            if fill_in:
+                slender[i][j] = True
+
 
 def slender_hull(pixels):
     """Computes the slender hull of a pixel input.
